@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Hub - Djibouti</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Observatoire des Données - Djibouti</h1>
+            <p>Évolution socio-économique 1960-2024</p>
+        </header>
+
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="all">Toutes catégories</option>
+                <option value="population">Démographie</option>
+                <option value="education">Éducation</option>
+                <option value="health">Santé</option>
+                <option value="economy">Économie</option>
+            </select>
+            
+            <select id="periodFilter">
+                <option value="all">Toutes périodes</option>
+                <option value="avant_1977">Avant 1977</option>
+                <option value="1977_1999">1977-1999</option>
+                <option value="2000_2024">2000-2024</option>
+            </select>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3>Population Totale</h3>
+                <canvas id="populationChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Établissements Scolaires</h3>
+                <canvas id="educationChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Personnel Médical</h3>
+                <canvas id="healthChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Accès aux Technologies</h3>
+                <canvas id="techChart"></canvas>
+            </div>
+        </div>
+
+        <div class="data-table">
+            <h3>Tableau des Données</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Indicateur</th>
+                        <th>Avant 1977</th>
+                        <th>1977-1999</th>
+                        <th>2000-2024</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rempli dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/chart-loader.js"></script>
+</body>
+</html>
